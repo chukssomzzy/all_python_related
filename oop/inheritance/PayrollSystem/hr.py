@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """Implementing a PayrollSystem class that processes payroll"""
+from abc import ABC, abstractmethod
 
 
 class PayrollSystem:
@@ -16,10 +17,16 @@ class PayrollSystem:
             print('')
 
 
-class Employee:
+class Employee(ABC):
+    """Defines an abstract class Employee"""
+
     def __init__(self, id, name):
         self.id = id
         self.name = name
+
+    @abstractmethod
+    def calculate_payroll(self):
+        pass
 
 
 class SalaryEmployee(Employee):
