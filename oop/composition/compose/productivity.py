@@ -27,15 +27,7 @@ class _ProductivitySystem:
             print()
 
 
-# Role classes implementation omitted
 
-_productivity_system = _ProductivitySystem()
-
-def get_role(role_id):
-    return _productivity_system.get_role(role_id)
-
-def track(employees, hours):
-    _productivity_system.track(employees, hours)
 class ManagerRole:
     def perform_duties(self, hours):
         return f'screams and yells for {hours} hours.'
@@ -55,4 +47,12 @@ class FactoryRole:
     def perform_duties(self, hours):
         return f'manufactures gadgets for {hours} hours.'
 
+# Role classes implementation omitted
 
+_productivity_system = _ProductivitySystem()
+
+def get_role(role_id):
+    return _productivity_system.get_role(role_id)
+
+def track(employees, hours):
+    _productivity_system.track(employees, hours)
